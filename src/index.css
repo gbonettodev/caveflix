@@ -221,6 +221,24 @@ button {
   transform: scale(1.045);
 }
 
+.poster-frame .poster-cave-mark {
+  position: absolute;
+  z-index: 2;
+  bottom: 0.55rem;
+  left: 0.65rem;
+  width: 1.7rem !important;
+  height: 1.7rem !important;
+  aspect-ratio: auto;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.65));
+  transition: none;
+}
+
+.poster-frame:hover .poster-cave-mark {
+  transform: none;
+}
+
 .movie-card {
   overflow: hidden;
   border: 1px solid var(--line);
