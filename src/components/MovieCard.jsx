@@ -1,18 +1,18 @@
 import { FaClock, FaPlay, FaStar } from 'react-icons/fa'
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, compact = false }) {
   const { title, type, genre, year, duration, rating, score, poster, description } = movie
 
   return (
-    <article className="movie-card group">
+    <article className={'movie-card group ' + (compact ? 'movie-card-compact' : '')}>
       <div className="poster-frame rounded-none border-0 border-b">
         <img src={poster} alt={'Pôster de ' + title} loading="lazy" />
-        <span className="absolute left-3 top-3 tag">{type}</span>
-        <span className="absolute bottom-3 right-3 grid size-9 place-items-center rounded-full bg-brand text-xs text-[#07090d] opacity-0 transition-opacity group-hover:opacity-100">
+        <span className="absolute left-3 top-3 tag">{compact ? genre : type}</span>
+        <span className="absolute bottom-3 right-3 grid size-9 place-items-center rounded-full bg-brand text-xs text-[#24140b] opacity-0 transition-opacity group-hover:opacity-100">
           <FaPlay className="ml-0.5" aria-hidden="true" />
         </span>
       </div>
-      <div className="p-4">
+      <div className="movie-card-details p-4">
         <div className="flex items-center justify-between gap-3 text-xs text-muted">
           <span>{year}</span>
           <span className="flex items-center gap-1 text-brand">

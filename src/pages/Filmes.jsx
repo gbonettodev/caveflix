@@ -55,7 +55,7 @@ function Filmes() {
 
       {filteredMovies.length > 0 ? (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
-          {filteredMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+          {filteredMovies.map((movie) => <MovieCard key={movie.id} movie={movie} compact />)}
         </div>
       ) : (
         <div className="glass-panel py-16 text-center">
