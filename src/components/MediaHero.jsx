@@ -32,6 +32,7 @@ function MediaHero({ items, eyebrow, actionHref }) {
         style={{ backgroundImage: 'url(' + activeItem.poster + ')' }}
         aria-hidden="true"
       />
+      <img className="hero-art" src={activeItem.poster} alt="" aria-hidden="true" />
       <div className="hero-content" key={activeItem.id}>
         <p className="eyebrow">{eyebrow}</p>
         <h1>{activeItem.title}</h1>
