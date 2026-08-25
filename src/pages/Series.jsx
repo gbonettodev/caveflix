@@ -55,7 +55,7 @@ function Series() {
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
-        {filteredSeries.map((item) => <MovieCard key={item.id} movie={item} />)}
+        {filteredSeries.map((item) => <MovieCard key={item.id} movie={item} compact />)}
       </div>
 
       {filteredSeries.length === 0 && (
