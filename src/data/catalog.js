@@ -140,9 +140,9 @@ export const series = [
 ]
 
 export const team = [
-  { id: 1, name: 'Integrante 01', role: 'Página inicial' },
-  { id: 2, name: 'Integrante 02', role: 'Catálogo de filmes' },
-  { id: 3, name: 'Integrante 03', role: 'Catálogo de séries' },
-  { id: 4, name: 'Integrante 04', role: 'Sobre a CAVEFLIX' },
-  { id: 5, name: 'Integrante 05', role: 'Contato e validação' },
+  { id: 1, name: 'Danilo Carneiro', role: "Equipe Men's Caves" },
+  { id: 2, name: 'Leonardo Barbosa', role: "Equipe Men's Caves" },
+  { id: 3, name: 'Gustavo Bonetto', role: "Equipe Men's Caves" },
+  { id: 4, name: 'Davi Sanches', role: "Equipe Men's Caves" },
+  { id: 5, name: 'Luiz Guilherme', role: "Equipe Men's Caves" },
 ]

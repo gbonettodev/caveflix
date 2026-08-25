@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { MediaHero, MovieCard, SectionHeading } from '../components'
-import { featuredMovies, movies, series } from '../data/catalog'
+import MovieCard from './MovieCard'
 
 function MediaRow({ title, items, action = '#/filmes' }) {
   const scrollerRef = useRef(null)
@@ -38,7 +37,10 @@ function MediaRow({ title, items, action = '#/filmes' }) {
     <section className="catalog-row">
       <div className="row-heading">
         <h2>{title}</h2>
-        <a href={action}>Ver mais <FaArrowRight aria-hidden="true" /></a>
+        <a href={action}>
+          Ver mais
+          <FaArrowRight aria-hidden="true" />
+        </a>
         <div className="row-controls" aria-label={'Navegação: ' + title}>
           <button
             className="rail-arrow"
@@ -67,29 +69,4 @@ function MediaRow({ title, items, action = '#/filmes' }) {
   )
 }
 
-function Home() {
-  return (
-    <>
-      <MediaHero eyebrow="Destaque da CAVEFLIX" items={featuredMovies} actionHref="#/filmes" />
-
-      <main className="streaming-home">
-        <MediaRow title="Escolhas da semana" items={featuredMovies} />
-        <MediaRow title="Melhores filmes" items={movies} />
-        <MediaRow title="Séries para maratonar" items={series} action="#/series" />
-        <MediaRow title="Mistério e suspense" items={[...movies].reverse()} />
-        <section className="home-link-row">
-          <SectionHeading
-            eyebrow="Explore a caverna inteira"
-            title="Encontre mais filmes e séries"
-            description="Navegue pelo catálogo completo e escolha o próximo filme ou série para assistir."
-            action={<a className="btn-ghost" href="#/filmes">Abrir catálogo <FaArrowRight aria-hidden="true" /></a>}
-          />
-        </section>
-      </main>
-    </>
-  )
-}
-
-Home.pageTitle = 'CAVEFLIX | Início'
-
-export default Home
+export default MediaRow
