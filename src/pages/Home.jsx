@@ -16,12 +16,12 @@ function Home() {
       <section className="hero-panel" style={{ backgroundImage: 'url(' + heroImage + ')' }}>
         <div className="mx-auto flex min-h-[610px] w-[min(1180px,calc(100%-2rem))] items-center py-20">
           <div className="max-w-2xl">
-            <p className="eyebrow">Sua próxima história começa aqui</p>
+            <p className="eyebrow">Histórias gravadas na pedra</p>
             <h1 className="display-title mt-5">
-              Grandes filmes. <span className="text-brand">Uma nova sessão.</span>
+              Grandes filmes. <span className="text-brand">Uma nova fogueira.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-white/65 sm:text-lg">
-              Explore uma curadoria de filmes e séries para todos os momentos. Encontre algo que combine com o seu clima de hoje.
+              Reúna sua tribo em torno de uma curadoria de filmes e séries. Encontre a próxima aventura para assistir sob a luz do fogo.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a className="btn-primary" href="#/filmes">
