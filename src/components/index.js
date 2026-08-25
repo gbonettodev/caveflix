@@ -1,0 +1,6 @@
+export { default as Button } from './Button'
+export { default as Footer } from './Footer'
+export { default as FormField } from './FormField'
+export { default as Header } from './Header'
+export { default as MovieCard } from './MovieCard'
+export { default as SectionHeading } from './SectionHeading'
