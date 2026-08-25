@@ -1,15 +1,32 @@
+import { z } from 'zod'
+
 export const genres = ['Todos', 'Ação', 'Drama', 'Ficção científica', 'Comédia', 'Suspense']
 
-const posterUrls = {
-  neon: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=700&q=85',
-  cinema: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=85',
-  popcorn: 'https://images.unsplash.com/photo-1543536448-d209d2d13a1c?auto=format&fit=crop&w=700&q=85',
-  reel: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=700&q=85',
-  screen: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=85',
-  theater: 'https://images.unsplash.com/photo-1586899028174-e7098604235b?auto=format&fit=crop&w=700&q=85',
-}
+import avengersPoster from '../assets/imgs/Avengers.jpeg'
+import endPoster from '../assets/imgs/e o fim.jpeg'
+import myWifeAndKidsPoster from '../assets/imgs/eu i a patroa.jpeg'
+import grownUpsPoster from '../assets/imgs/gente grande.jpeg'
+import itPoster from '../assets/imgs/IT.jpeg'
+import devilWearsPradaPoster from '../assets/imgs/o diabo veste prada.jpeg'
+import fantasticFourPoster from '../assets/imgs/quarteto fantastico.jpeg'
+import rickAndMortyPoster from '../assets/imgs/Rick and Morty.jpeg'
+import theBoysPoster from '../assets/imgs/the boys.jpeg'
+import youPoster from '../assets/imgs/you.jpeg'
 
-export const featuredMovies = [
+const mediaSchema = z.object({
+  id: z.number(),
+  title: z.string().min(1),
+  type: z.enum(['Filme', 'Série']),
+  genre: z.enum(genres.slice(1)),
+  year: z.number(),
+  duration: z.string().min(1),
+  rating: z.string().min(1),
+  score: z.number().min(0).max(10),
+  poster: z.string().min(1),
+  description: z.string().min(1),
+})
+
+export const featuredMovies = mediaSchema.array().parse([
   {
     id: 1,
     title: 'Horizonte de Neon',
@@ -19,7 +36,7 @@ export const featuredMovies = [
     duration: '2h 08min',
     rating: '16',
     score: 9.1,
-    poster: posterUrls.neon,
+    poster: avengersPoster,
     description: 'Uma piloto atravessa uma cidade orbital em busca da última memória da humanidade.',
   },
   {
@@ -31,7 +48,7 @@ export const featuredMovies = [
     duration: '1h 52min',
     rating: '12',
     score: 8.7,
-    poster: posterUrls.cinema,
+    poster: devilWearsPradaPoster,
     description: 'Duas irmãs reencontram suas raízes quando a cidade natal é ameaçada por uma tempestade.',
   },
   {
@@ -43,12 +60,12 @@ export const featuredMovies = [
     duration: '1h 47min',
     rating: '14',
     score: 8.4,
-    poster: posterUrls.reel,
+    poster: fantasticFourPoster,
     description: 'Uma especialista em segurança tem uma noite para impedir um ataque invisível.',
   },
-]
+])
 
-export const movies = [
+export const movies = mediaSchema.array().parse([
   ...featuredMovies,
   {
     id: 4,
@@ -59,7 +76,7 @@ export const movies = [
     duration: '1h 36min',
     rating: '10',
     score: 8.2,
-    poster: posterUrls.popcorn,
+    poster: grownUpsPoster,
     description: 'Um grupo de amigos transforma o cinema de bairro em palco para uma última grande sessão.',
   },
   {
@@ -71,7 +88,7 @@ export const movies = [
     duration: '1h 58min',
     rating: '16',
     score: 8.6,
-    poster: posterUrls.screen,
+    poster: itPoster,
     description: 'Uma radialista capta um pedido de socorro que deveria ter sido impossível.',
   },
   {
@@ -83,12 +100,12 @@ export const movies = [
     duration: '2h 01min',
     rating: '12',
     score: 8.1,
-    poster: posterUrls.theater,
+    poster: endPoster,
     description: 'Uma família se reúne em uma ilha para decidir o que levará para o futuro.',
   },
-]
+])
 
-export const series = [
+export const series = mediaSchema.array().parse([
   {
     id: 101,
     title: 'Distrito 09',
@@ -98,7 +115,7 @@ export const series = [
     duration: '2 temporadas',
     rating: '16',
     score: 9.3,
-    poster: posterUrls.screen,
+    poster: theBoysPoster,
     description: 'Uma equipe de investigadores descobre que a cidade está sendo observada de dentro.',
   },
   {
@@ -110,7 +127,7 @@ export const series = [
     duration: '1 temporada',
     rating: '14',
     score: 8.9,
-    poster: posterUrls.neon,
+    poster: rickAndMortyPoster,
     description: 'Cinco desconhecidos acordam em versões diferentes da mesma realidade.',
   },
   {
@@ -122,7 +139,7 @@ export const series = [
     duration: '3 temporadas',
     rating: '12',
     score: 8.5,
-    poster: posterUrls.popcorn,
+    poster: myWifeAndKidsPoster,
     description: 'A rotina de um prédio ganha novos episódios quando ninguém consegue ficar quieto.',
   },
   {
@@ -134,10 +151,10 @@ export const series = [
     duration: '1 temporada',
     rating: '16',
     score: 9.0,
-    poster: posterUrls.cinema,
+    poster: youPoster,
     description: 'Uma arquivista encontra fitas que antecipam crimes ainda não cometidos.',
   },
-]
+])
 
 export const team = [
   { id: 1, name: 'Danilo Carneiro', role: "Equipe Men's Caves" },

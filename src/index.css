@@ -204,6 +204,7 @@ button {
 .poster-frame {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 2 / 3;
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--surface);
@@ -211,9 +212,10 @@ button {
 
 .poster-frame img {
   display: block;
-  aspect-ratio: 2 / 3;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  background: #120d0a;
   transition: transform 350ms ease;
 }
 
@@ -516,6 +518,22 @@ button {
   inset: 0;
   background-position: center;
   background-size: cover;
+  filter: blur(18px);
+  opacity: 0.42;
+  transform: scale(1.08);
+  animation: hero-backdrop-fade 700ms ease both;
+}
+
+.hero-art {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 4%;
+  width: min(54vw, 48rem);
+  height: 100%;
+  object-fit: contain;
+  object-position: center right;
+  filter: drop-shadow(-1.5rem 0 2rem rgba(0, 0, 0, 0.42));
   animation: hero-backdrop-fade 700ms ease both;
 }
 
@@ -796,11 +814,6 @@ button {
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.27);
 }
 
-.movie-card-compact .poster-frame img,
-.page-shell .movie-card .poster-frame img {
-  aspect-ratio: 16 / 9;
-}
-
 .movie-card-compact:hover .poster-frame img,
 .movie-card-compact:focus-within .poster-frame img {
   transform: scale(1.07);
@@ -906,6 +919,13 @@ button {
   .prime-hero {
     min-height: 510px;
     align-items: flex-end;
+  }
+
+  .hero-art {
+    right: 0;
+    width: 100%;
+    opacity: 0.32;
+    object-position: center top;
   }
 
   .hero-content {
