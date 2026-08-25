@@ -55,7 +55,7 @@ function Contato() {
       <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
         <div>
           <p className="eyebrow">Fale com a CAVEFLIX</p>
-          <h1 className="display-title mt-5 text-5xl sm:text-7xl">Tem uma história para indicar?</h1>
+          <h1 className="display-title mt-5 text-5xl sm:text-7xl">Tem um filme ou série para indicar?</h1>
           <p className="mt-6 text-base leading-8 text-muted">
             Envie sua mensagem, compartilhe uma sugestão ou conte o que você gostaria de ver na próxima versão do projeto.
           </p>

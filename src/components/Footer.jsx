@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaPlay, FaRegEnvelope } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaRegEnvelope } from 'react-icons/fa'
 
 function Footer() {
   return (
@@ -6,13 +6,10 @@ function Footer() {
       <div className="mx-auto grid w-[min(1180px,calc(100%-2rem))] gap-8 py-10 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <a className="flex items-center gap-2.5" href="#/" aria-label="CAVEFLIX - início">
-            <span className="grid size-8 place-items-center rounded-lg bg-brand text-[#24140b]">
-              <FaPlay className="ml-0.5 text-xs" aria-hidden="true" />
-            </span>
-            <span className="text-lg font-black tracking-[-0.07em]">CAVEFLIX</span>
+            <img className="brand-logo brand-logo-footer" src="/brand/caveflix-logo.png" alt="CAVEFLIX" />
           </a>
           <p className="mt-4 max-w-sm text-sm leading-7 text-muted">
-            Um catálogo feito por quem gosta de descobrir histórias que ficam na memória.
+            Um catálogo feito para quem gosta de assistir filmes e séries.
           </p>
         </div>
 
