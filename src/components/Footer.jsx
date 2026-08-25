@@ -2,11 +2,11 @@ import { FaGithub, FaInstagram, FaPlay, FaRegEnvelope } from 'react-icons/fa'
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#090c11]">
+    <footer className="border-t border-white/10 bg-[#1b110c]">
       <div className="mx-auto grid w-[min(1180px,calc(100%-2rem))] gap-8 py-10 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <a className="flex items-center gap-2.5" href="#/" aria-label="CAVEFLIX - início">
-            <span className="grid size-8 place-items-center rounded-lg bg-brand text-[#07090d]">
+            <span className="grid size-8 place-items-center rounded-lg bg-brand text-[#24140b]">
               <FaPlay className="ml-0.5 text-xs" aria-hidden="true" />
             </span>
             <span className="text-lg font-black tracking-[-0.07em]">CAVEFLIX</span>
