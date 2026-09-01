@@ -29,7 +29,7 @@ const mediaSchema = z.object({
 export const featuredMovies = mediaSchema.array().parse([
   {
     id: 1,
-    title: 'Horizonte de Neon',
+    title: 'Avengers Educadores',
     type: 'Filme',
     genre: 'Ficção científica',
     year: 2025,
@@ -37,11 +37,11 @@ export const featuredMovies = mediaSchema.array().parse([
     rating: '16',
     score: 9.1,
     poster: avengersPoster,
-    description: 'Uma piloto atravessa uma cidade orbital em busca da última memória da humanidade.',
+    description: 'Uma nova equipe de heróis encara uma missão que pode transformar o futuro.',
   },
   {
     id: 2,
-    title: 'Depois da Chuva',
+    title: 'O Diabo Veste Prada 2',
     type: 'Filme',
     genre: 'Drama',
     year: 2024,
@@ -49,11 +49,11 @@ export const featuredMovies = mediaSchema.array().parse([
     rating: '12',
     score: 8.7,
     poster: devilWearsPradaPoster,
-    description: 'Duas irmãs reencontram suas raízes quando a cidade natal é ameaçada por uma tempestade.',
+    description: 'Novos desafios colocam moda, carreira e escolhas pessoais em rota de colisão.',
   },
   {
     id: 3,
-    title: 'Código de Fuga',
+    title: 'O Quarteto Fantástico: Primeiros Passos',
     type: 'Filme',
     genre: 'Ação',
     year: 2025,
@@ -61,7 +61,7 @@ export const featuredMovies = mediaSchema.array().parse([
     rating: '14',
     score: 8.4,
     poster: fantasticFourPoster,
-    description: 'Uma especialista em segurança tem uma noite para impedir um ataque invisível.',
+    description: 'A primeira família da Marvel enfrenta uma ameaça cósmica enquanto protege seu mundo.',
   },
 ])
 
@@ -69,7 +69,7 @@ export const movies = mediaSchema.array().parse([
   ...featuredMovies,
   {
     id: 4,
-    title: 'Riso em Cartaz',
+    title: 'Gente Grande 2',
     type: 'Filme',
     genre: 'Comédia',
     year: 2023,
@@ -77,11 +77,11 @@ export const movies = mediaSchema.array().parse([
     rating: '10',
     score: 8.2,
     poster: grownUpsPoster,
-    description: 'Um grupo de amigos transforma o cinema de bairro em palco para uma última grande sessão.',
+    description: 'Um grupo de amigos se reúne novamente e transforma as férias em uma sequência de confusões.',
   },
   {
     id: 5,
-    title: 'A Última Frequência',
+    title: 'It: Capítulo Dois',
     type: 'Filme',
     genre: 'Suspense',
     year: 2022,
@@ -89,11 +89,11 @@ export const movies = mediaSchema.array().parse([
     rating: '16',
     score: 8.6,
     poster: itPoster,
-    description: 'Uma radialista capta um pedido de socorro que deveria ter sido impossível.',
+    description: 'O Clube dos Perdedores retorna a Derry para enfrentar o mal que marcou sua infância.',
   },
   {
     id: 6,
-    title: 'Maré Alta',
+    title: 'É o Fim',
     type: 'Filme',
     genre: 'Drama',
     year: 2021,
@@ -101,14 +101,14 @@ export const movies = mediaSchema.array().parse([
     rating: '12',
     score: 8.1,
     poster: endPoster,
-    description: 'Uma família se reúne em uma ilha para decidir o que levará para o futuro.',
+    description: 'Um grupo de amigos tenta sobreviver ao fim do mundo preso dentro de uma casa.',
   },
 ])
 
 export const series = mediaSchema.array().parse([
   {
     id: 101,
-    title: 'Distrito 09',
+    title: 'Os Guris',
     type: 'Série',
     genre: 'Ação',
     year: 2025,
@@ -116,11 +116,11 @@ export const series = mediaSchema.array().parse([
     rating: '16',
     score: 9.3,
     poster: theBoysPoster,
-    description: 'Uma equipe de investigadores descobre que a cidade está sendo observada de dentro.',
+    description: 'Um grupo de amigos se envolve em uma noite de confusão, medo e muita aventura.',
   },
   {
     id: 102,
-    title: 'Entre Mundos',
+    title: "Men's Caves",
     type: 'Série',
     genre: 'Ficção científica',
     year: 2024,
@@ -128,11 +128,11 @@ export const series = mediaSchema.array().parse([
     rating: '14',
     score: 8.9,
     poster: rickAndMortyPoster,
-    description: 'Cinco desconhecidos acordam em versões diferentes da mesma realidade.',
+    description: 'Um grupo de jovens encara criaturas estranhas em uma aventura por mundos fantásticos.',
   },
   {
     id: 103,
-    title: 'Quase Domingo',
+    title: 'Eu Iludi as Crianças',
     type: 'Série',
     genre: 'Comédia',
     year: 2023,
@@ -140,11 +140,11 @@ export const series = mediaSchema.array().parse([
     rating: '12',
     score: 8.5,
     poster: myWifeAndKidsPoster,
-    description: 'A rotina de um prédio ganha novos episódios quando ninguém consegue ficar quieto.',
+    description: 'Uma família barulhenta transforma cada dia em uma nova situação inesperada.',
   },
   {
     id: 104,
-    title: 'O Arquivo Azul',
+    title: 'Tu',
     type: 'Série',
     genre: 'Suspense',
     year: 2025,
@@ -152,7 +152,7 @@ export const series = mediaSchema.array().parse([
     rating: '16',
     score: 9.0,
     poster: youPoster,
-    description: 'Uma arquivista encontra fitas que antecipam crimes ainda não cometidos.',
+    description: 'Um homem carismático esconde segredos enquanto observa cada passo de quem deseja.',
   },
 ])
 
