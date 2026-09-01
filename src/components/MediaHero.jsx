@@ -1,39 +1,59 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { FaChevronLeft, FaChevronRight, FaInfoCircle, FaPlay, FaPlus, FaStar } from 'react-icons/fa'
 
 function MediaHero({ items, eyebrow, actionHref }) {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isFading, setIsFading] = useState(false)
+  const isChangingRef = useRef(false)
+  const transitionTimerRef = useRef(null)
+  const finishTimerRef = useRef(null)
   const activeItem = items[activeIndex]
+
+  const changeTo = useCallback((nextIndex) => {
+    if (isChangingRef.current || nextIndex === activeIndex) return
+
+    isChangingRef.current = true
+    setIsFading(true)
+    transitionTimerRef.current = window.setTimeout(() => {
+      setActiveIndex(nextIndex)
+      finishTimerRef.current = window.setTimeout(() => {
+        setIsFading(false)
+        isChangingRef.current = false
+      }, 40)
+    }, 260)
+  }, [activeIndex])
+
+  const changeSlide = useCallback((direction) => {
+    changeTo((activeIndex + direction + items.length) % items.length)
+  }, [activeIndex, changeTo, items.length])
 
   useEffect(() => {
     if (items.length < 2) return undefined
 
-    const timer = window.setInterval(() => {
-      setActiveIndex((currentIndex) => (currentIndex + 1) % items.length)
-    }, 10000)
+    const timer = window.setInterval(() => changeSlide(1), 10000)
 
     return () => window.clearInterval(timer)
-  }, [items.length])
+  }, [changeSlide, items.length])
 
-  const changeSlide = (direction) => {
-    setActiveIndex((currentIndex) => (currentIndex + direction + items.length) % items.length)
-  }
+  useEffect(() => () => {
+    window.clearTimeout(transitionTimerRef.current)
+    window.clearTimeout(finishTimerRef.current)
+  }, [])
 
   if (!activeItem) return null
 
   return (
     <section
-      className="prime-hero media-hero"
+      className={'prime-hero media-hero ' + (isFading ? 'is-fading' : '')}
       aria-label="Conteúdo em destaque"
     >
       <div
         className="hero-backdrop"
-        key={activeItem.id}
         style={{ backgroundImage: 'url(' + activeItem.poster + ')' }}
         aria-hidden="true"
       />
       <img className="hero-art" src={activeItem.poster} alt="" aria-hidden="true" />
-      <div className="hero-content" key={activeItem.id}>
+      <div className="hero-content">
         <p className="eyebrow">{eyebrow}</p>
         <h1>{activeItem.title}</h1>
         <p className="hero-meta">
@@ -73,7 +93,7 @@ function MediaHero({ items, eyebrow, actionHref }) {
             className={index === activeIndex ? 'is-active' : ''}
             key={item.id}
             type="button"
-            onClick={() => setActiveIndex(index)}
+            onClick={() => changeTo(index)}
             aria-label={'Mostrar ' + item.title}
             aria-current={index === activeIndex ? 'true' : undefined}
           />
