@@ -232,6 +232,7 @@ button {
   height: 1.7rem !important;
   aspect-ratio: auto;
   object-fit: contain;
+  background: transparent !important;
   pointer-events: none;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.65));
   transition: none;
@@ -793,7 +794,7 @@ button {
 }
 
 .movie-card-compact {
-  flex: 0 0 clamp(220px, 18.4vw, 290px);
+  flex: 0 0 clamp(200px, 16.8vw, 260px);
   position: relative;
   border: 0;
   border-radius: 0.48rem;

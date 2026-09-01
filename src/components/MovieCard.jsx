@@ -8,7 +8,7 @@ function MovieCard({ movie, compact = false }) {
       <div className="poster-frame rounded-none border-0 border-b">
         <img src={poster} alt={'Pôster de ' + title} loading="lazy" />
         <span className="absolute left-3 top-3 tag">{compact ? genre : type}</span>
-        <img className="poster-cave-mark" src="/brand/caveflix-mark-transparent.png?v=3" alt="" aria-hidden="true" />
+        <img className="poster-cave-mark" src="/brand/caveflix-mark-transparent.png?v=4" alt="" aria-hidden="true" />
         <span className="absolute bottom-3 right-3 grid size-9 place-items-center rounded-full bg-brand text-xs text-[#24140b] opacity-0 transition-opacity group-hover:opacity-100">
           <FaPlay className="ml-0.5" aria-hidden="true" />
         </span>
