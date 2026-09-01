@@ -3,15 +3,31 @@ import { z } from 'zod'
 export const genres = ['Todos', 'Ação', 'Drama', 'Ficção científica', 'Comédia', 'Suspense']
 
 import avengersPoster from '../assets/imgs/Avengers.jpeg'
-import endPoster from '../assets/imgs/e o fim.jpeg'
-import myWifeAndKidsPoster from '../assets/imgs/eu i a patroa.jpeg'
-import grownUpsPoster from '../assets/imgs/gente grande.jpeg'
-import itPoster from '../assets/imgs/IT.jpeg'
-import devilWearsPradaPoster from '../assets/imgs/o diabo veste prada.jpeg'
-import fantasticFourPoster from '../assets/imgs/quarteto fantastico.jpeg'
-import rickAndMortyPoster from '../assets/imgs/Rick and Morty.jpeg'
-import theBoysPoster from '../assets/imgs/the boys.jpeg'
-import youPoster from '../assets/imgs/you.jpeg'
+import endPoster from '../assets/imgs/e_o_fim.jpeg'
+import eIludiAsAcriancasPoster from '../assets/imgs/eu_iludi_as_crianças.jpeg'
+import megamentePoster from '../assets/imgs/megamente.jpeg'
+import devilWearsPradaPoster from '../assets/imgs/titia_veste_lacoste.jpeg'
+import fantasticFourPoster from '../assets/imgs/quarteto_fantastico.jpeg'
+import mensCavesPoster from '../assets/imgs/mens_caves.jpeg'
+import osGurisPoster from '../assets/imgs/os_guris.jpeg'
+import tuPoster from '../assets/imgs/tu.jpeg'
+import comoEuConheciDaviPoster from '../assets/imgs/como_eu_conheci __davi.jpeg'
+import pelotasPoster from '../assets/imgs/pelotas.jpeg'
+import jogoTigrinoPoster from '../assets/imgs/jogo_do_tigrinho.jpeg'
+import escolaParasolPoster from '../assets/imgs/escola_do_parasol.jpeg'
+import carasEstranhosPoster from '../assets/imgs/caras_estranhos.jpeg'
+import laCasaAelPoster from '../assets/imgs/la_casa_do_anel.jpeg'
+import purgatorioPoster from '../assets/imgs/o_purgatorio.jpeg'
+import voltaDosPoster from '../assets/imgs/a_volta_dos_que_nao_foram.jpeg'
+import advogandoUmGadoPoster from '../assets/imgs/advogando_um_gado.jpeg'
+import coisaTrocoPoster from '../assets/imgs/Coisa_o_troço.jpeg'
+import daviEMeninosPoster from '../assets/imgs/davi_e_os_meninos.jpeg'
+import gajosAzuisPoster from '../assets/imgs/gajos_azuis.jpeg'
+import garotos_BaixinhosPoster from '../assets/imgs/garotos_baixinhos.jpeg'
+import titiaVesteLacosPoster from '../assets/imgs/titia_veste_lacoste.jpeg'
+import tupiQuintaSeriePoster from '../assets/imgs/tupi_e_a_quinta_serie.jpeg'
+import wandaoPoster from '../assets/imgs/wandão.jpeg'
+import seLamberDisfarçePoster from '../assets/imgs/se_lamber_disfarce.jpeg'
 
 const mediaSchema = z.object({
   id: z.number(),
@@ -41,7 +57,7 @@ export const featuredMovies = mediaSchema.array().parse([
   },
   {
     id: 2,
-    title: 'O Diabo Veste Prada 2',
+    title: 'A Titia Veste Lacoste 2',
     type: 'Filme',
     genre: 'Drama',
     year: 2024,
@@ -69,26 +85,26 @@ export const movies = mediaSchema.array().parse([
   ...featuredMovies,
   {
     id: 4,
-    title: 'Gente Grande 2',
+    title: 'Garotos Pequenos 2',
     type: 'Filme',
     genre: 'Comédia',
     year: 2023,
     duration: '1h 36min',
     rating: '10',
     score: 8.2,
-    poster: grownUpsPoster,
+    poster: megamentePoster,
     description: 'Um grupo de amigos se reúne novamente e transforma as férias em uma sequência de confusões.',
   },
   {
     id: 5,
-    title: 'It: Capítulo Dois',
+    title: 'Coisa O troço',
     type: 'Filme',
     genre: 'Suspense',
     year: 2022,
     duration: '1h 58min',
     rating: '16',
     score: 8.6,
-    poster: itPoster,
+    poster: coisaTrocoPoster,
     description: 'O Clube dos Perdedores retorna a Derry para enfrentar o mal que marcou sua infância.',
   },
   {
@@ -103,6 +119,138 @@ export const movies = mediaSchema.array().parse([
     poster: endPoster,
     description: 'Um grupo de amigos tenta sobreviver ao fim do mundo preso dentro de uma casa.',
   },
+  {
+    id: 7,
+    title: 'A Volta dos Que Não Foram',
+    type: 'Filme',
+    genre: 'Ação',
+    year: 2024,
+    duration: '2h 15min',
+    rating: '14',
+    score: 8.4,
+    poster: voltaDosPoster,
+    description: 'Heróis desaparecidos retornam para enfrentar uma ameaça ainda maior.',
+  },
+  {
+    id: 8,
+    title: 'Advogando um Gado',
+    type: 'Filme',
+    genre: 'Comédia',
+    year: 2023,
+    duration: '1h 48min',
+    rating: '12',
+    score: 7.9,
+    poster: advogandoUmGadoPoster,
+    description: 'Um advogado excêntrico toma um caso absurdo que muda sua vida completamente.',
+  },
+  {
+    id: 9,
+    title: 'Coisa o Troço',
+    type: 'Filme',
+    genre: 'Suspense',
+    year: 2024,
+    duration: '1h 54min',
+    rating: '16',
+    score: 8.3,
+    poster: coisaTrocoPoster,
+    description: 'Uma criatura misteriosa aterroriza uma cidade pequena com consequências desastrosas.',
+  },
+  {
+    id: 10,
+    title: 'Davi e os Meninos',
+    type: 'Filme',
+    genre: 'Ação',
+    year: 2025,
+    duration: '2h 02min',
+    rating: '14',
+    score: 8.5,
+    poster: daviEMeninosPoster,
+    description: 'Um adolescente e seus amigos descobrem poderes sobrenaturais e enfrentam perigos.',
+  },
+  {
+    id: 11,
+    title: 'Gajos Azuis',
+    type: 'Filme',
+    genre: 'Ficção científica',
+    year: 2024,
+    duration: '2h 08min',
+    rating: '12',
+    score: 8.2,
+    poster: gajosAzuisPoster,
+    description: 'Alienígenas azuis chegam à Terra com propósitos misteriosos e transformadores.',
+  },
+  {
+    id: 12,
+    title: 'Garotos Baixinhos',
+    type: 'Filme',
+    genre: 'Comédia',
+    year: 2023,
+    duration: '1h 42min',
+    rating: '10',
+    score: 7.8,
+    poster: garotos_BaixinhosPoster,
+    description: 'Um grupo de rapazes baixos enfrenta desafios do mundo de forma hilariante.',
+  },
+  {
+    id: 13,
+    title: 'Megamente',
+    type: 'Filme',
+    genre: 'Ficção científica',
+    year: 2024,
+    duration: '1h 55min',
+    rating: '12',
+    score: 8.0,
+    poster: megamentePoster,
+    description: 'Um super-vilão inesperadamente poderoso descobre que ser mau não é tudo.',
+  },
+  {
+    id: 14,
+    title: 'Se Lamber Disfarce',
+    type: 'Filme',
+    genre: 'Comédia',
+    year: 2025,
+    duration: '1h 45min',
+    rating: '12',
+    score: 7.9,
+    poster: seLamberDisfarçePoster,
+    description: 'Um estelionatário usa disfarces absurdos para enganar as pessoas em suas aventuras.',
+  },
+  {
+    id: 15,
+    title: 'Titia Veste Lacoste',
+    type: 'Filme',
+    genre: 'Comédia',
+    year: 2024,
+    duration: '1h 50min',
+    rating: '10',
+    score: 8.1,
+    poster: titiaVesteLacosPoster,
+    description: 'Uma tia extravagante e cheia de estilo transforma a vida de sua família.',
+  },
+  {
+    id: 16,
+    title: 'Tupi e a Quinta Série',
+    type: 'Filme',
+    genre: 'Comédia',
+    year: 2023,
+    duration: '1h 52min',
+    rating: '10',
+    score: 7.7,
+    poster: tupiQuintaSeriePoster,
+    description: 'Um menino enfrentando as aventuras e desventuras da quinta série escolar.',
+  },
+  {
+    id: 17,
+    title: 'Wandão',
+    type: 'Filme',
+    genre: 'Ficção científica',
+    year: 2025,
+    duration: '2h 00min',
+    rating: '14',
+    score: 8.6,
+    poster: wandaoPoster,
+    description: 'Uma heroína com poderes mágicos enfrenta dimensões alternativas e seus mistérios.',
+  },
 ])
 
 export const series = mediaSchema.array().parse([
@@ -115,7 +263,7 @@ export const series = mediaSchema.array().parse([
     duration: '2 temporadas',
     rating: '16',
     score: 9.3,
-    poster: theBoysPoster,
+    poster: osGurisPoster,
     description: 'Um grupo de amigos se envolve em uma noite de confusão, medo e muita aventura.',
   },
   {
@@ -127,7 +275,7 @@ export const series = mediaSchema.array().parse([
     duration: '1 temporada',
     rating: '14',
     score: 8.9,
-    poster: rickAndMortyPoster,
+    poster: mensCavesPoster,
     description: 'Um grupo de jovens encara criaturas estranhas em uma aventura por mundos fantásticos.',
   },
   {
@@ -139,7 +287,7 @@ export const series = mediaSchema.array().parse([
     duration: '3 temporadas',
     rating: '12',
     score: 8.5,
-    poster: myWifeAndKidsPoster,
+    poster: eIludiAsAcriancasPoster,
     description: 'Uma família barulhenta transforma cada dia em uma nova situação inesperada.',
   },
   {
@@ -151,8 +299,92 @@ export const series = mediaSchema.array().parse([
     duration: '1 temporada',
     rating: '16',
     score: 9.0,
-    poster: youPoster,
+    poster: tuPoster,
     description: 'Um homem carismático esconde segredos enquanto observa cada passo de quem deseja.',
+  },
+  {
+    id: 105,
+    title: 'Pelotas',
+    type: 'Série',
+    genre: 'Comédia',
+    year: 2024,
+    duration: '2 temporadas',
+    rating: '12',
+    score: 8.3,
+    poster: pelotasPoster,
+    description: 'A vida dos gaúchos em Pelotas é repleta de aventuras, risos e momentos inesperados.',
+  },
+  {
+    id: 106,
+    title: 'Jogo do Tigrinho',
+    type: 'Série',
+    genre: 'Suspense',
+    year: 2025,
+    duration: '1 temporada',
+    rating: '16',
+    score: 8.7,
+    poster: jogoTigrinoPoster,
+    description: 'Apostadores enfrentam desafios mortais em um jogo que testa seus limites psicológicos.',
+  },
+  {
+    id: 107,
+    title: 'Escola do Parasol',
+    type: 'Série',
+    genre: 'Drama',
+    year: 2024,
+    duration: '2 temporadas',
+    rating: '12',
+    score: 8.1,
+    poster: escolaParasolPoster,
+    description: 'Estudantes vivem suas experiências escolares em um ambiente carregado de emoções e descobertas.',
+  },
+  {
+    id: 108,
+    title: 'Caras Estranhos',
+    type: 'Série',
+    genre: 'Suspense',
+    year: 2024,
+    duration: '1 temporada',
+    rating: '14',
+    score: 8.5,
+    poster: carasEstranhosPoster,
+    description: 'Mistérios envolvem personagens estranhos que carregam segredos obscuros e perturbadores.',
+  },
+  {
+    id: 109,
+    title: 'Como Eu Conheci o Davi',
+    type: 'Série',
+    genre: 'Comédia',
+    year: 2025,
+    duration: '3 temporadas',
+    rating: '12',
+    score: 8.6,
+    poster: comoEuConheciDaviPoster,
+    description: 'Uma jornada emocionante e hilariante que revela como dois amigos se conheceram.',
+  },
+  {
+    id: 110,
+    title: 'La Casa do Anel',
+    type: 'Série',
+    genre: 'Ficção científica',
+    year: 2024,
+    duration: '2 temporadas',
+    rating: '14',
+    score: 8.8,
+    poster: laCasaAelPoster,
+    description: 'Uma casa misteriosa guarda segredos antigos que desafiam as leis da realidade.',
+  },
+  {
+    id: 111,
+    title: 'O Purgatório',
+    type: 'Série',
+    genre: 'Drama',
+    year: 2025,
+    duration: '1 temporada',
+    rating: '16',
+    score: 8.9,
+    poster: purgatorioPoster,
+    description: 'Almas presas em um limbo enfrentam seus piores medos para encontrar redenção.',
   },
 ])
 
